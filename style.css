@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #b3638b, #ffccff); 
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff1493; /* Cor rosa - você pode alterar conforme desejado */
+    margin-bottom: 20px;
+}
+
+#heart-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#heart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('coracao.png'); /* Substitua 'coracao.png' pelo caminho para a imagem do coração */
+    background-size: contain;
+    animation: beat 1s infinite alternate; /* Aqui definimos a animação do coração */
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.photos img {
+    max-width: 200px; /* Ajuste o tamanho conforme necessário */
+    max-height: 200px;
+}
+
+@keyframes beat {
+    to {
+        transform: scale(1.1); /* O coração aumentará e diminuirá levemente */
+    }
+}
